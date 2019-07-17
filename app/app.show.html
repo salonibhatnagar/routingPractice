@@ -1,0 +1,53 @@
+<h2>  Show Employee.....</h2>
+<h2> You Have Searched Employee Id {{data1}}</h2>
+<table class="table" border="1">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Salary</th>
+            <th scope="col">Employee Department</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+    
+    <tr *ngFor="let emp of empall;let i=index">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.empSalary}}</td>
+        <td>{{emp.empDepartment}}</td>
+        <input type="button" value="Delete" (click)="ondelete(i)">
+        <input type="button" value="Update" (click)="onupdate(i)"></tr>
+    </table>
+    <br>
+    <br>
+    <div *ngIf="status==true">
+<table>
+        
+            
+                    Update employee 
+                      <div class="form-group">
+                        <label for="exampleInputid1">Enter Id</label>
+                        <input type="text" class="form-control" id="exampleInputid1" aria-describedby="emailHelp" placeholder="Enter Id"  name="id" id="eid" [(ngModel)]="empId" #idcontrol="ngModel" required>
+                        <small id="emailHelp" class="form-text text-muted"  *ngIf="namecontrol.touched && namecontrol.invalid"></small>>We'll never share your email with anyone else.</small>
+                       </div>
+                      <div class="form-group">
+                        <label for="exampleInputid1">Enter Id</label>
+                        <input type="text" class="form-control" id="exampleInputid1" aria-describedby="emailHelp" placeholder="Enter Id"  name="id" id="eid" [(ngModel)]="empId" #idcontrol="ngModel" required>
+                        <small id="emailHelp" class="form-text text-muted"  *ngIf="namecontrol.touched && namecontrol.invalid"></small>>We'll never share your email with anyone else.</small>
+                      </div>
+
+
+
+                </td></tr><tr>
+                <td><input type="text" name="id" id="eid" [(ngModel)]="empId" ></td></tr>
+            
+               <tr> <td>Enter Name<input type="text" name="nam" id="enam" [(ngModel)]="empName" ></td></tr>
+                <tr><td>Enter Salary<input type="text" name="sal" id="esal" [(ngModel)]="empSalary" ></td></tr>
+            
+               <tr><td>Enter Salary<input type="text" name="dept" id="edept" [(ngModel)]="empDepartment" ></td></tr>
+    
+            
+                <input type="button" value="Update" (click)="Update()"></div>
+                
+</table></div>

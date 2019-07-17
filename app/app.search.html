@@ -1,0 +1,20 @@
+<h2>Search Employee</h2>
+<table>
+       
+
+
+
+<div class="form-group">
+        <label >Enter Id</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Id" name="idd" id="eid" [(ngModel)]="empId2">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <button type="submit" class="btn btn-primary" (click)="searchemp()" >Search</button>
+      </div>
+      
+
+
+      
+<tr *ngIf="status==true">
+Invalid Employee Id
+</tr>
+</table>
